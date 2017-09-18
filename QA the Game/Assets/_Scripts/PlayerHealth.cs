@@ -1,20 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.UIElements;
 
 public class PlayerHealth : MonoBehaviour {
 
-	public float starting_health = 100f;
-	public float current_health = 0f;
+	public float maxHealth = 100f;
+	public float curHealth = 0f;
 
 	public Slider healthSlider; 
 
-	public boolean damaged;
-	public boolean isDead;
+	public bool damaged;
+	public bool isDead;
 
 	// Use this for initialization
-	void Start () {
-		current_health = starting_health;
+	void Awake () {
+		curHealth = maxHealth;
 	}
 	
 	// Update is called once per frame
@@ -25,9 +26,9 @@ public class PlayerHealth : MonoBehaviour {
 	public void TakeDamage (float amount)
 	{
 		damaged = true;
-		currentHealth -= amount;
-		healthSlider.value = currentHealth;
-		if(currentHealth <= 0 && !isDead)
+		curHealth -= amount;
+		healthSlider.value = curHealth;
+		if(curHealth <= 0 && !isDead)
 		{
 			Death ();
 		}

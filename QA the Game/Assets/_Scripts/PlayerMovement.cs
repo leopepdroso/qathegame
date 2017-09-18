@@ -15,9 +15,11 @@ public class PlayerMovement : MonoBehaviour {
 	//Combat
 	public bool isAttacking;
 	public float meleeCD;
+	public float meleeDMG;
 	public Collider2D meleeTrigger;
 	public rangedOrigin rO;
 	public float rangedCD;
+	public float rangedDMG;
 
 	//Detection
 	float groundRadius = 0.2f;

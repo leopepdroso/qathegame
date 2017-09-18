@@ -11,7 +11,8 @@ public class meleeContact : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("Hit detected melee");
 		if (other.tag == "Enemy") {
-			DestroyObject(other.gameObject);
+			other.gameObject.GetComponent<enemyCore> ().takeDamage(col.GetComponentInParent<PlayerMovement> ().meleeDMG);
+			//DestroyObject(other.gameObject);
 			col.enabled = false;
 			Debug.Log ("Hit went through");		
 		}

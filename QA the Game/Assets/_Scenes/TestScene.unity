@@ -199,9 +199,38 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114725353876785452, guid: 8932dd12ac5d937499ea8067f7b6968c,
+        type: 2}
+      propertyPath: meleeDMG
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114725353876785452, guid: 8932dd12ac5d937499ea8067f7b6968c,
+        type: 2}
+      propertyPath: rangedDMG
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8932dd12ac5d937499ea8067f7b6968c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &664176970 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1578734303364732, guid: cd29c7029b02e6a40aad0e1ca4bb6826,
+    type: 2}
+  m_PrefabInternal: {fileID: 2113874345}
+--- !u!114 &664176971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 664176970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d20db9c03d7a71346b66f56c3ee2af65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMaxHP: 50
+  enemyCurHP: 0
+  enemyArmor: 0
 --- !u!1 &868688490
 GameObject:
   m_ObjectHideFlags: 0

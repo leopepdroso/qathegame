@@ -17,7 +17,7 @@ public class rangedOrigin : MonoBehaviour {
 		RaycastHit2D hit = Physics2D.Raycast (transform.position, Vector3.right, whatIsEnemy);
 		if (hit.collider.gameObject.tag == "Enemy") {
 			Debug.Log ("RANGED HAS HIT ENEMY!!");
-			DestroyObject (hit.collider.gameObject);
+			hit.collider.gameObject.GetComponent<enemyCore> ().takeDamage(pm.rangedDMG);
 		}
 		yield return new WaitForSeconds (pm.rangedCD);
 		pm.isAttacking = false;

@@ -21,7 +21,8 @@ public class PlayerHealth : MonoBehaviour {
 	void Update () {
 		
 	}
-	public void TakeDamage (int amount)
+
+	public void TakeDamage (float amount)
 	{
 		damaged = true;
 		currentHealth -= amount;

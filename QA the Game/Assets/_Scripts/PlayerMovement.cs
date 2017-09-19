@@ -16,9 +16,11 @@ public class PlayerMovement : MonoBehaviour {
 	public float meleeDMG;
 	public float maxHealth;
 	public float curHealth;
+    public float maxEnergy;
+    public float curEnergy;
 
-	//----------------------Combat
-	public bool isAttacking;
+    //----------------------Combat
+    public bool isAttacking;
 	public float meleeCD;
 	public Collider2D meleeTrigger;
 	public rangedOrigin rO;
@@ -35,13 +37,13 @@ public class PlayerMovement : MonoBehaviour {
 
 	//----------------------UI Elements
 	public HealthBar hpBar;
+    public EnergyBar energyBar;
 
-
-	//----------------------Settings
-	void Awake () {
+    //----------------------Settings
+    void Awake () {
 		meleeTrigger.enabled = false;
 		curHealth = maxHealth;
-	}
+    }
 
 	void Start () {
 		isGrounded = true;
@@ -154,13 +156,18 @@ public class PlayerMovement : MonoBehaviour {
 	//----------------------Takes Damage
 	public void getDamage(float dmg){
 		curHealth -= dmg;
-		hpBar.updateHP ();
+		hpBar.updateHP();
 	}
 
+    public void addMana(float dmg)
+    {
+        curEnergy += dmg;
+        energyBar.updateEnergy();
+    }
 
 
-	//----------------------Flips character sprite
-	void Flip()
+    //----------------------Flips character sprite
+    void Flip()
 	{
 		facingRight = !facingRight;
 		Vector3 flipScale = transform.localScale;

@@ -13,12 +13,10 @@ public class PlayerHealth : MonoBehaviour {
 	public bool damaged;
 	public bool isDead;
 
-	// Use this for initialization
 	void Awake () {
 		curHealth = maxHealth;
 	}
-	
-	// Update is called once per frame
+
 	void Update () {
 		
 	}

@@ -54,12 +54,12 @@ public class PlayerMovement : MonoBehaviour {
 
 	//----------------------Non-physics
 	void Update (){
-		
+		checkGround ();
 	}
 
 	//Physics
 	void FixedUpdate () {
-		checkGround ();
+		
 		inputMove ();
 		inputJump ();
 		checkMovement ();

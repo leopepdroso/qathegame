@@ -85,8 +85,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1627012468913462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.43, y: -4.36, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalPosition: {x: -13.429913, y: 13.390686, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 4603434417582240}
   - {fileID: 4855467163140548}
@@ -152,7 +152,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61101682624915044
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -232,6 +232,10 @@ MonoBehaviour:
   maxSpeed: 0
   acceleration: 0
   jumpSpeed: 500
+  rangedDMG: 15
+  meleeDMG: 10
+  maxHealth: 100
+  curHealth: 0
   isAttacking: 0
   meleeCD: 2
   meleeTrigger: {fileID: 61418376127173280}
@@ -241,6 +245,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  hpBar: {fileID: 0}
 --- !u!114 &114835948059420772
 MonoBehaviour:
   m_ObjectHideFlags: 1

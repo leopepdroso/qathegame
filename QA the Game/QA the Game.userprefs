@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\PlayerMovement.cs">
@@ -7,6 +8,19 @@
       <File FileName="Assets\_Scripts\enemyCore.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets\_Scripts\TestScripts\PlayerHazard.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets\_Scripts\PlayerMovement.cs" Line="171" Column="2" NotebookId="1" />
+=======
+﻿<Properties StartupItem="QA the Game.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\UI\EnergyBar.cs">
+    <Files>
+      <File FileName="Assets\_Scripts\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\meleeContact.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\rangedOrigin.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\enemyCore.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\PlayerHealth.cs" Line="3" Column="19" />
+      <File FileName="Assets\_Scripts\TestScripts\PlayerHazard.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\UI\EnergyBar.cs" Line="15" Column="2" />
+>>>>>>> 2764717b1e39a4a7eb006a47218ba5f5f0e0c28e
     </Files>
     <FloatingWindows>
       <FloatingWindow WindowId="1" X="-8" Y="-8" Width="1920" Height="1017">

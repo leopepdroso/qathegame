@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerHazard : MonoBehaviour {
 
-	public PlayerHealth playerH;
+	public PlayerMovement playerH;
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
-			playerH.TakeDamage (5f);
+			playerH.getDamage (5f);
 		}
 	}
 }

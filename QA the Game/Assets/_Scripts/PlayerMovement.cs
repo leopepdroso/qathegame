@@ -4,35 +4,43 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-	//Movement
+	//----------------------Movement
 	public bool isGrounded;
 	public float moveSpeed;
 	public float maxSpeed;
 	public float acceleration;
 	public float jumpSpeed;
 
+	//----------------------PlayerStats
+	public float rangedDMG;
+	public float meleeDMG;
+	public float maxHealth;
+	public float curHealth;
 
-	//Combat
+	//----------------------Combat
 	public bool isAttacking;
 	public float meleeCD;
-	public float meleeDMG;
 	public Collider2D meleeTrigger;
 	public rangedOrigin rO;
 	public float rangedCD;
-	public float rangedDMG;
 
-	//Detection
+	//----------------------Detection
 	float groundRadius = 0.2f;
 	Rigidbody2D rb;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
 
-	//Flip
+	//----------------------Flip
 	bool facingRight = true;
 
-	//Settings
+	//----------------------UI Elements
+	public HealthBar hpBar;
+
+
+	//----------------------Settings
 	void Awake () {
 		meleeTrigger.enabled = false;
+		curHealth = maxHealth;
 	}
 
 	void Start () {
@@ -42,7 +50,7 @@ public class PlayerMovement : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 	}
 
-	//Non-physics
+	//----------------------Non-physics
 	void Update (){
 		
 	}
@@ -57,7 +65,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
-	//Horizontal movement
+	//----------------------Horizontal movement
 	void inputMove () {
 		if (Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D)) {
 
@@ -86,7 +94,7 @@ public class PlayerMovement : MonoBehaviour {
 	
 	}
 
-	//Checks to stop horizontal movement
+	//----------------------Checks to stop horizontal movement
 	void checkMovement (){
 
 		if (!Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D)) {
@@ -95,7 +103,7 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	//Vertical movement
+	//----------------------Vertical movement
 	void inputJump () {
 		if (Input.GetKeyDown (KeyCode.Space) && isGrounded) {
 			rb.AddForce (new Vector2(0, jumpSpeed));
@@ -105,13 +113,13 @@ public class PlayerMovement : MonoBehaviour {
 	
 	}
 
-	//Checks to see if able to jump
+	//----------------------Checks to see if able to jump
 	void checkGround(){
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 
 	}
 
-	//Checks and inputs attack commands
+	//----------------------Checks and inputs attack commands
 	void checkAttack(){
 
 		if (Input.GetMouseButtonDown (0)) {
@@ -131,7 +139,7 @@ public class PlayerMovement : MonoBehaviour {
 	}
 		
 
-	//Starts melee attack process
+	//----------------------Starts melee attack process
 	IEnumerator meleeRoutine(){
 		Debug.Log ("meleeRoutine started");
 		isAttacking = true;
@@ -143,11 +151,15 @@ public class PlayerMovement : MonoBehaviour {
 
 	}
 
-	//Starts ranged attack process
+	//----------------------Takes Damage
+	public void getDamage(float dmg){
+		curHealth -= dmg;
+		hpBar.updateHP ();
+	}
 
 
 
-	//Flips character sprite
+	//----------------------Flips character sprite
 	void Flip()
 	{
 		facingRight = !facingRight;

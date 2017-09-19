@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
+
+	public PlayerStats savedStats;
 	//----------------------Movement
 	public bool isGrounded;
 	public float moveSpeed;
@@ -16,6 +18,9 @@ public class PlayerMovement : MonoBehaviour {
 	public float meleeDMG;
 	public float maxHealth;
 	public float curHealth;
+	public float maxMana;
+	public float curMana;
+	bool hasStarted = false;
 
 	//----------------------Combat
 	public bool isAttacking;
@@ -39,8 +44,15 @@ public class PlayerMovement : MonoBehaviour {
 
 	//----------------------Settings
 	void Awake () {
+		setStartingPoint ();
 		meleeTrigger.enabled = false;
-		curHealth = maxHealth;
+		curHealth = savedStats.playerCURHP;
+		maxHealth = savedStats.playerMAXHP;
+		curMana = savedStats.playerCURMANA;
+		maxMana = savedStats.playerMAXMANA;
+		meleeDMG = savedStats.playerMDMG;
+		rangedDMG = savedStats.playerRDMG;
+
 	}
 
 	void Start () {
@@ -157,6 +169,10 @@ public class PlayerMovement : MonoBehaviour {
 		hpBar.updateHP ();
 	}
 
+	//----------------------Gains Mana on Melee
+	public void getMana(){
+		curMana += maxMana / 20;
+	}
 
 
 	//----------------------Flips character sprite
@@ -168,5 +184,18 @@ public class PlayerMovement : MonoBehaviour {
 		transform.localScale = flipScale;
 	}
 
+	//----------------------Set Characters initial attribute
+	void setStartingPoint(){
+		if (savedStats.hasStarted == false) {
+			savedStats.playerMAXHP = 100;
+			savedStats.playerCURHP = 100;
+			savedStats.playerMAXMANA = 100;
+			savedStats.playerCURMANA = 0;
+			savedStats.playerMDMG = 10;
+			savedStats.playerRDMG = 15;
+			hasStarted = true;
+			savedStats.hasStarted = true;
+		}
+	}
 
 }

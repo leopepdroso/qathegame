@@ -1,14 +1,20 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\PlayerHealth.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\PlayerMovement.cs">
     <Files>
-      <File FileName="Assets\_Scripts\PlayerMovement.cs" Line="43" Column="3" />
-      <File FileName="Assets\_Scripts\meleeContact.cs" Line="28" Column="2" />
-      <File FileName="Assets\_Scripts\rangedOrigin.cs" Line="28" Column="1" />
-      <File FileName="Assets\_Scripts\enemyCore.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\PlayerHealth.cs" Line="17" Column="17" />
-      <File FileName="Assets\_Scripts\TestScripts\PlayerHazard.cs" Line="11" Column="26" />
+      <File FileName="Assets\_Scripts\meleeContact.cs" Line="24" Column="38" NotebookId="1" />
+      <File FileName="Assets\_Scripts\rangedOrigin.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets\_Scripts\enemyCore.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets\_Scripts\TestScripts\PlayerHazard.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets\_Scripts\PlayerMovement.cs" Line="171" Column="2" NotebookId="1" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="-8" Y="-8" Width="1920" Height="1017">
+        <Files>
+          <File FileName="Assets\_Scripts\PlayerStats.cs" Line="16" Column="28" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

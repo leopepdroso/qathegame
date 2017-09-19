@@ -6,6 +6,7 @@ public class meleeContact : MonoBehaviour {
 
 
 	public Collider2D col;
+	public PlayerMovement player;
 	public float attackLife;
 
 	void OnTriggerEnter2D(Collider2D other){
@@ -14,7 +15,8 @@ public class meleeContact : MonoBehaviour {
 			other.gameObject.GetComponent<enemyCore> ().takeDamage(col.GetComponentInParent<PlayerMovement> ().meleeDMG);
 			//DestroyObject(other.gameObject);
 			col.enabled = false;
-			Debug.Log ("Hit went through");		
+			Debug.Log ("Hit went through");
+			player.getMana ();
 		}
 
 	}

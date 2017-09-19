@@ -201,21 +201,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114725353876785452, guid: 8932dd12ac5d937499ea8067f7b6968c,
         type: 2}
-      propertyPath: meleeDMG
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 114725353876785452, guid: 8932dd12ac5d937499ea8067f7b6968c,
-        type: 2}
-      propertyPath: rangedDMG
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 114725353876785452, guid: 8932dd12ac5d937499ea8067f7b6968c,
-        type: 2}
-      propertyPath: maxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 114725353876785452, guid: 8932dd12ac5d937499ea8067f7b6968c,
-        type: 2}
       propertyPath: hpBar
       value: 
       objectReference: {fileID: 1336206683}

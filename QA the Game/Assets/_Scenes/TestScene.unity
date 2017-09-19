@@ -316,6 +316,11 @@ Prefab:
       propertyPath: isAttacking
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114725353876785452, guid: 8932dd12ac5d937499ea8067f7b6968c,
+        type: 2}
+      propertyPath: energyBar
+      value: 
+      objectReference: {fileID: 1336206685}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8932dd12ac5d937499ea8067f7b6968c, type: 2}
   m_IsPrefabParent: 0

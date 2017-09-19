@@ -54,6 +54,7 @@
      <Compile Include="Assets\_Scripts\CameraFollowTest.cs" />
      <Compile Include="Assets\_Scripts\enemyCore.cs" />
      <Compile Include="Assets\_Scripts\meleeContact.cs" />
+     <Compile Include="Assets\_Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\_Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\_Scripts\PlayerStats.cs" />
      <Compile Include="Assets\_Scripts\rangedOrigin.cs" />

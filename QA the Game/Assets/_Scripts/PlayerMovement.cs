@@ -18,14 +18,14 @@ public class PlayerMovement : MonoBehaviour {
 	public float meleeDMG;
 	public float maxHealth;
 	public float curHealth;
-<<<<<<< HEAD
+
 	public float maxMana;
 	public float curMana;
 	bool hasStarted = false;
-=======
+
     public float maxEnergy;
     public float curEnergy;
->>>>>>> 2764717b1e39a4a7eb006a47218ba5f5f0e0c28e
+
 
     //----------------------Combat
     public bool isAttacking;
@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour {
 	public HealthBar hpBar;
     public EnergyBar energyBar;
 
-<<<<<<< HEAD
+
 
 	//----------------------Settings
 	void Awake () {
@@ -61,13 +61,8 @@ public class PlayerMovement : MonoBehaviour {
 		rangedDMG = savedStats.playerRDMG;
 
 	}
-=======
-    //----------------------Settings
-    void Awake () {
-		meleeTrigger.enabled = false;
-		curHealth = maxHealth;
-    }
->>>>>>> 2764717b1e39a4a7eb006a47218ba5f5f0e0c28e
+
+
 
 	void Start () {
 		isGrounded = true;
@@ -183,18 +178,18 @@ public class PlayerMovement : MonoBehaviour {
 		hpBar.updateHP();
 	}
 
-<<<<<<< HEAD
+
 	//----------------------Gains Mana on Melee
 	public void getMana(){
 		curMana += maxMana / 20;
 	}
-=======
+
     public void addMana(float dmg)
     {
         curEnergy += dmg;
         energyBar.updateEnergy();
     }
->>>>>>> 2764717b1e39a4a7eb006a47218ba5f5f0e0c28e
+
 
 
     //----------------------Flips character sprite

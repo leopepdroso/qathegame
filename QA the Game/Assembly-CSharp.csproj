@@ -51,13 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\_Scripts\CameraFollow.cs" />
+     <Compile Include="Assets\_Scripts\CameraFollowTest.cs" />
      <Compile Include="Assets\_Scripts\enemyCore.cs" />
      <Compile Include="Assets\_Scripts\meleeContact.cs" />
      <Compile Include="Assets\_Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\_Scripts\PlayerStats.cs" />
      <Compile Include="Assets\_Scripts\rangedOrigin.cs" />
      <Compile Include="Assets\_Scripts\TestScripts\PlayerHazard.cs" />
+     <Compile Include="Assets\_Scripts\UI\EnergyBar.cs" />
      <Compile Include="Assets\_Scripts\UI\HealthBar.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

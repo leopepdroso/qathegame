@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class HealthBar : MonoBehaviour {
 
-	public PlayerMovement player;
+	public AttributeController playerAttributes;
 	public Image content;
 	float curContent;
 	float damageTaken;
@@ -14,13 +14,13 @@ public class HealthBar : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		curContent = player.curHealth/player.maxHealth ;
+		curContent = playerAttributes.curHealth/playerAttributes.maxHealth ;
 		content.fillAmount = curContent;
 	}
 	
 	public void updateHP(){
 		Debug.Log ("Reached updateHP");
-		curContent = player.curHealth/player.maxHealth ;
+		curContent = playerAttributes.curHealth/playerAttributes.maxHealth ;
 		content.fillAmount = curContent;
 		Debug.Log ("curContent= " + curContent);
 		updateColor (curContent);

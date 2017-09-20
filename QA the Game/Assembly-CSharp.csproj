@@ -53,10 +53,13 @@
   <ItemGroup>
      <Compile Include="Assets\_Scripts\CameraFollowTest.cs" />
      <Compile Include="Assets\_Scripts\enemyCore.cs" />
-     <Compile Include="Assets\_Scripts\meleeContact.cs" />
-     <Compile Include="Assets\_Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\_Scripts\PlayerControllers\AttributeController.cs" />
+     <Compile Include="Assets\_Scripts\PlayerControllers\meleeContact.cs" />
+     <Compile Include="Assets\_Scripts\PlayerControllers\PlayerCombat.cs" />
+     <Compile Include="Assets\_Scripts\PlayerControllers\PlayerMovement.cs" />
+     <Compile Include="Assets\_Scripts\PlayerControllers\rangedOrigin.cs" />
+     <Compile Include="Assets\_Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\_Scripts\PlayerStats.cs" />
-     <Compile Include="Assets\_Scripts\rangedOrigin.cs" />
      <Compile Include="Assets\_Scripts\TestScripts\PlayerHazard.cs" />
      <Compile Include="Assets\_Scripts\UI\EnergyBar.cs" />
      <Compile Include="Assets\_Scripts\UI\HealthBar.cs" />

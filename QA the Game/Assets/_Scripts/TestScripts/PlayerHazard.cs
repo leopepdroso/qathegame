@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerHazard : MonoBehaviour {
 
-	public PlayerMovement playerH;
+	public AttributeController playerH;
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.tag == "Player") {
 			playerH.getDamage (5f);
-            playerH.addMana(5f);
+
         }
 	}
-}
+}	

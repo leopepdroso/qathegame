@@ -1,16 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\PlayerControllers\PlayerMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_Scripts\CameraFollowTest.cs">
     <Files>
       <File FileName="Assets\_Scripts\PlayerControllers\PlayerCombat.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\PlayerControllers\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\PlayerControllers\PlayerMovement.cs" Line="14" Column="2" />
       <File FileName="Assets\_Scripts\PlayerControllers\AttributeController.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\PlayerControllers\rangedOrigin.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\PlayerControllers\meleeContact.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\UI\EnergyBar.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\TestScripts\PlayerHazard.cs" Line="1" Column="1" />
       <File FileName="Assets\_Scripts\UI\HealthBar.cs" Line="1" Column="1" />
-      <File FileName="Assets\_Scripts\CameraFollowTest.cs" Line="1" Column="1" />
+      <File FileName="Assets\_Scripts\CameraFollowTest.cs" Line="27" Column="169" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

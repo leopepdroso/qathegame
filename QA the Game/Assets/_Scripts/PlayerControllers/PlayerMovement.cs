@@ -87,8 +87,7 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (!Input.GetKey (KeyCode.A) && !Input.GetKey (KeyCode.D)) {
 			moveSpeed = 0;
-			Debug.Log ("reset speed");
-		}
+			}
 	}
 
 	//----------------------Vertical movement

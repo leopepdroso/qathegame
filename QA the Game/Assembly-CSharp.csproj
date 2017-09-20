@@ -53,6 +53,8 @@
   <ItemGroup>
      <Compile Include="Assets\_Scripts\CameraFollowTest.cs" />
      <Compile Include="Assets\_Scripts\enemyCore.cs" />
+     <Compile Include="Assets\_Scripts\Interactables\Interactables.cs" />
+     <Compile Include="Assets\_Scripts\Interactables\SkillController.cs" />
      <Compile Include="Assets\_Scripts\PlayerControllers\AttributeController.cs" />
      <Compile Include="Assets\_Scripts\PlayerControllers\meleeContact.cs" />
      <Compile Include="Assets\_Scripts\PlayerControllers\PlayerCombat.cs" />

@@ -6,17 +6,18 @@ public class meleeContact : MonoBehaviour {
 
 
 	public Collider2D col;
-	public PlayerMovement player;
+	public PlayerCombat combat;
+	public AttributeController attribute;
 	public float attackLife;
 
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("Hit detected melee");
 		if (other.tag == "Enemy") {
-			other.gameObject.GetComponent<enemyCore> ().takeDamage(col.GetComponentInParent<PlayerMovement> ().meleeDMG);
-			//DestroyObject(other.gameObject);
+			other.gameObject.GetComponent<enemyCore> ().takeDamage(col.GetComponentInParent<PlayerMovement> ().combatController.meleeDMG);
 			col.enabled = false;
 			Debug.Log ("Hit went through");
-			player.getMana ();
+			attribute.addMana ();
+			attribute.energyBar.updateEnergy();
 		}
 
 	}

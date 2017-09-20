@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class rangedOrigin : MonoBehaviour {
 
-	public PlayerMovement pm;
+	public PlayerCombat pm;
 	public LayerMask whatIsEnemy;
 
 	void Awake (){

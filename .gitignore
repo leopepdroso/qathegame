@@ -1,16 +1,31 @@
-QA the Game/Temp/
-QA the Game/Temp/UnityLockfile
-QA the Game/Library/metadata/00/00000000000000007100000000000000
-QA the Game/Library/metadata/00/00000000000000002000000000000000
-QA the Game/Library/metadata/00/00000000000000002000000000000000
-QA the Game/Library/metadata/00/00000000000000003000000000000000
-QA the Game/Library/metadata/00/00000000000000004000000000000000
-QA the Game/Library/metadata/00/0000000000000000c000000000000000
-QA the Game/Library/metadata/00/0000000000000000b000000000000000
-QA the Game/Library/metadata/00/0000000000000000a100000000000000
-QA the Game/Library/metadata/00/0000000000000000a000000000000000
-QA the Game/Library/metadata/00/00000000000000009000000000000000
-QA the Game/Library/metadata/00/00000000000000008000000000000000
-QA the Game/Library/metadata/00/00000000000000007100000000000000
-QA the Game/Library/metadata/00/00000000000000006100000000000000
-*.meta
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Library/
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+obj/
+*.svd
+*.userprefs
+/*.csproj
+*.pidb
+*.suo
+/*.sln
+*.user
+*.unityproj
+*.booproj
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

@@ -5,10 +5,17 @@ using UnityEngine;
 public class Interactables : MonoBehaviour {
 
 	public GameObject player;
+	public float interactTime = 0.01f;
+	public string interactType;
+	public GameObject portalExit;
+
+	public void interact(){
+		Invoke (interactType, interactTime);
+	}
+		
 
 	public void portal(){
-		player.transform.position = new Vector3 (0, 0, 0);
-		Debug.Log ("Telported");
+		player.transform.position = portalExit.transform.position;
 	}
 
 }

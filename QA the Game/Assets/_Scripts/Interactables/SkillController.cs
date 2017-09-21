@@ -22,7 +22,7 @@ public class SkillController : MonoBehaviour {
 
 	void Update(){
 		if (Input.GetKeyDown (KeyCode.W) && currentGameObject != null) {
-			currentGameObject.GetComponent<Interactables>().portal();
+			currentGameObject.GetComponent<Interactables>().interact();
 			Debug.Log ("Telported");
 		}
 	}

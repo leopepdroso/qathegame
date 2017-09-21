@@ -167,6 +167,101 @@ Transform:
   m_PrefabParentObject: {fileID: 4526400675988136, guid: c98aba78c0b815f4eba20d4e2b4160fb,
     type: 2}
   m_PrefabInternal: {fileID: 12756000}
+--- !u!1001 &21459005
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4988805951795886, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988805951795886, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 8.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988805951795886, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988805951795886, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988805951795886, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988805951795886, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988805951795886, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4988805951795886, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 61791543283231494, guid: cd29c7029b02e6a40aad0e1ca4bb6826,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 0.020451784
+      objectReference: {fileID: 0}
+    - target: {fileID: 61791543283231494, guid: cd29c7029b02e6a40aad0e1ca4bb6826,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.17650431
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578734303364732, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+      propertyPath: m_Name
+      value: portal2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578734303364732, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
+    - target: {fileID: 61791543283231494, guid: cd29c7029b02e6a40aad0e1ca4bb6826,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.0006060973
+      objectReference: {fileID: 0}
+    - target: {fileID: 61791543283231494, guid: cd29c7029b02e6a40aad0e1ca4bb6826,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 0.2072918
+      objectReference: {fileID: 0}
+    - target: {fileID: 61791543283231494, guid: cd29c7029b02e6a40aad0e1ca4bb6826,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &21459006 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1578734303364732, guid: cd29c7029b02e6a40aad0e1ca4bb6826,
+    type: 2}
+  m_PrefabInternal: {fileID: 21459005}
+--- !u!114 &21459007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 21459006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35ddaf68d847f65409a803503a24ecd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1282957738}
+  interactTime: 0.01
+  interactType: portal
+  portalExit: {fileID: 589535401}
 --- !u!1001 &42035243
 Prefab:
   m_ObjectHideFlags: 0
@@ -1273,7 +1368,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1578734303364732, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
       propertyPath: m_Name
-      value: Portal
+      value: portal
       objectReference: {fileID: 0}
     - target: {fileID: 1578734303364732, guid: cd29c7029b02e6a40aad0e1ca4bb6826, type: 2}
       propertyPath: m_TagString
@@ -1314,6 +1409,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1282957738}
+  interactTime: 0.01
+  interactType: portal
+  portalExit: {fileID: 21459006}
 --- !u!1001 &642669635
 Prefab:
   m_ObjectHideFlags: 0

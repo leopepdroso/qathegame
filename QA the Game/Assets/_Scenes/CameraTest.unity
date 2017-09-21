@@ -2404,10 +2404,12 @@ MonoBehaviour:
   acceleration: 0
   jumpSpeed: 500
   combatController: {fileID: 2142936659}
+  spellHandle: {fileID: 2142936661}
   groundCheck: {fileID: 229668879}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  facingRight: 1
 --- !u!61 &1282957741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3791,6 +3793,7 @@ GameObject:
   - component: {fileID: 2142936660}
   - component: {fileID: 2142936659}
   - component: {fileID: 2142936658}
+  - component: {fileID: 2142936661}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -3868,3 +3871,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2142936661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142936657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05441e4c9b9f2e448848336ed6e2b49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attHandler: {fileID: 2142936658}
+  combatHandler: {fileID: 2142936659}
+  moveHandler: {fileID: 1282957740}
+  dodgeSpeed: 0
+  dodgeDistance: 0
+  currentDistance: 0
+  notDodging: 0
+  underDodge: 0

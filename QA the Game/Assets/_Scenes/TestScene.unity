@@ -324,6 +324,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 327813998}
+--- !u!114 &576041370 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114378602002444240, guid: cb84857d1c8828945a11c3a455616f80,
+    type: 2}
+  m_PrefabInternal: {fileID: 593774182}
+  m_Script: {fileID: 11500000, guid: b2b6639d4b541d94a94520731ae7690a, type: 3}
 --- !u!1001 &593774182
 Prefab:
   m_ObjectHideFlags: 0
@@ -373,6 +379,15 @@ Prefab:
       propertyPath: energyBar
       value: 
       objectReference: {fileID: 1336206685}
+    - target: {fileID: 114378602002444240, guid: cb84857d1c8828945a11c3a455616f80,
+        type: 2}
+      propertyPath: spellHandle
+      value: 
+      objectReference: {fileID: 914708632}
+    - target: {fileID: 4911800535087160, guid: cb84857d1c8828945a11c3a455616f80, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb84857d1c8828945a11c3a455616f80, type: 2}
   m_IsPrefabParent: 0
@@ -488,6 +503,11 @@ Prefab:
       propertyPath: playerH
       value: 
       objectReference: {fileID: 1490802720}
+    - target: {fileID: 61968160785302720, guid: 0d93075c34680f8448ca894d70f5d860,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d93075c34680f8448ca894d70f5d860, type: 2}
   m_IsPrefabParent: 0
@@ -599,6 +619,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &914708629 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1786167992137628, guid: cb84857d1c8828945a11c3a455616f80,
+    type: 2}
+  m_PrefabInternal: {fileID: 593774182}
+--- !u!114 &914708630 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114562120232646316, guid: cb84857d1c8828945a11c3a455616f80,
+    type: 2}
+  m_PrefabInternal: {fileID: 593774182}
+  m_Script: {fileID: 11500000, guid: 740864af2b09e5d4f961a5eccbbe3529, type: 3}
+--- !u!114 &914708632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 914708629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05441e4c9b9f2e448848336ed6e2b49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attHandler: {fileID: 1490802720}
+  combatHandler: {fileID: 914708630}
+  moveHandler: {fileID: 576041370}
+  dodgeSpeed: 2
+  dodgeDistance: 3
+  currentDistance: 0
+  notDodging: 1
+  underDodge: 0
 --- !u!1 &1336206677
 GameObject:
   m_ObjectHideFlags: 0

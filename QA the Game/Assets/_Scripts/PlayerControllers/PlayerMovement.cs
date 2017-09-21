@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	//----------------------Combat
 	public PlayerCombat combatController;
+	public skillHandler spellHandle;
 
 	//----------------------Detection
 	float groundRadius = 0.2f;
@@ -24,7 +25,7 @@ public class PlayerMovement : MonoBehaviour {
 	public LayerMask whatIsGround;
 
 	//----------------------Flip
-	bool facingRight = true;
+	public bool facingRight = true;
 
 	//----------------------Settings
 	void Awake () {
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Start () {
 		isGrounded = true;
+		spellHandle.notDodging = true;
 		acceleration = 0.1f;
 		maxSpeed = 5f;
 		rb = GetComponent<Rigidbody2D> ();
@@ -49,6 +51,7 @@ public class PlayerMovement : MonoBehaviour {
 		inputMove ();
 		inputJump ();
 		checkMovement ();
+		spellHandle.checkInput ();
 		combatController.checkAttack ();
 
 	}
@@ -105,17 +108,6 @@ public class PlayerMovement : MonoBehaviour {
 		isGrounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 
 	}
-
-	//----------------------Checks and inputs attack commands
-
-		
-
-	//----------------------Starts melee attack process
-
-
-
-		
-
 
 
     //----------------------Flips character sprite

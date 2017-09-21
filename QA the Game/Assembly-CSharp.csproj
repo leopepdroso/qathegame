@@ -60,6 +60,7 @@
      <Compile Include="Assets\_Scripts\PlayerControllers\PlayerCombat.cs" />
      <Compile Include="Assets\_Scripts\PlayerControllers\PlayerMovement.cs" />
      <Compile Include="Assets\_Scripts\PlayerControllers\rangedOrigin.cs" />
+     <Compile Include="Assets\_Scripts\PlayerControllers\skillHandler.cs" />
      <Compile Include="Assets\_Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\_Scripts\PlayerStats.cs" />
      <Compile Include="Assets\_Scripts\TestScripts\PlayerHazard.cs" />

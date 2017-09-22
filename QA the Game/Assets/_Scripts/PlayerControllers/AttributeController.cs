@@ -9,7 +9,7 @@ public class AttributeController : MonoBehaviour {
 	public float curHealth;
 	public float maxMana;
 	public float curMana;
-	bool hasStarted = false;
+	public bool invulnerable = false;
 	public float maxEnergy;
 	public float curEnergy;
 	public PlayerCombat combatController;
@@ -43,15 +43,16 @@ public class AttributeController : MonoBehaviour {
 			savedStats.playerCURMANA = 0;
 			savedStats.playerMDMG = 10;
 			savedStats.playerRDMG = 15;
-			hasStarted = true;
 			savedStats.hasStarted = true;
 		}
 	}
 
 	//----------------------Takes Damage
 	public void getDamage(float dmg){
-		curHealth -= dmg;
-		hpBar.updateHP();
+		if (!invulnerable) {
+			curHealth -= dmg;
+			hpBar.updateHP ();
+		}
 	}
 
 

@@ -540,10 +540,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e059a76eb7d9e9842ada2aca8d3c798f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pm: {fileID: 0}
+  pm: {fileID: 2142936659}
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!1 &229668878
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 555082077}
   - component: {fileID: 555082078}
+  - component: {fileID: 555082079}
   m_Layer: 0
   m_Name: meleeTrigger
   m_TagString: Untagged
@@ -1136,6 +1137,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34625062, y: 0.06700069}
   m_EdgeRadius: 0
+--- !u!114 &555082079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555082076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54c635f19d2e6f44d808212a431bfd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  col: {fileID: 555082078}
+  combat: {fileID: 2142936659}
+  attribute: {fileID: 2142936658}
+  attackLife: 0.3
 --- !u!1001 &563317059
 Prefab:
   m_ObjectHideFlags: 0
@@ -2404,10 +2420,12 @@ MonoBehaviour:
   acceleration: 0
   jumpSpeed: 500
   combatController: {fileID: 2142936659}
+  spellHandle: {fileID: 2142936661}
   groundCheck: {fileID: 229668879}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
+  facingRight: 1
 --- !u!61 &1282957741
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3791,6 +3809,7 @@ GameObject:
   - component: {fileID: 2142936660}
   - component: {fileID: 2142936659}
   - component: {fileID: 2142936658}
+  - component: {fileID: 2142936661}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Untagged
@@ -3814,6 +3833,7 @@ MonoBehaviour:
   curHealth: 100
   maxMana: 100
   curMana: 0
+  invulnerable: 0
   maxEnergy: 100
   curEnergy: 0
   combatController: {fileID: 2142936659}
@@ -3868,3 +3888,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2142936661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2142936657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05441e4c9b9f2e448848336ed6e2b49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attHandler: {fileID: 2142936658}
+  attributes: {fileID: 2142936658}
+  moveHandler: {fileID: 1282957740}
+  dodgeSpeed: 2
+  dodgeDistance: 3
+  currentDistance: 0
+  notDodging: 0
+  underDodge: 0

@@ -2162,10 +2162,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2433cc15ea9f7fc4194c45d90f04d29d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Xmin: -3.37
-  Ymin: -9.08
-  Xmax: 3.38
-  Ymax: 9.03
+  Xmin: -3.5
+  Ymin: -9.07
+  Xmax: 3.52
+  Ymax: 9.08
+  smoothTimeY: 0.5
+  smoothTimeX: 0.5
   player: {fileID: 1282957738}
 --- !u!1001 &1227008344
 Prefab:
@@ -3885,8 +3887,8 @@ MonoBehaviour:
   attHandler: {fileID: 2142936658}
   combatHandler: {fileID: 2142936659}
   moveHandler: {fileID: 1282957740}
-  dodgeSpeed: 0
-  dodgeDistance: 0
+  dodgeSpeed: 5
+  dodgeDistance: 6
   currentDistance: 0
   notDodging: 0
   underDodge: 0

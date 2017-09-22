@@ -5,7 +5,7 @@ using UnityEngine;
 public class skillHandler : MonoBehaviour {
 
 	public AttributeController attHandler;
-	public PlayerCombat combatHandler;
+	//public PlayerCombat combatHandler;
 	public PlayerMovement moveHandler;
 	public float dodgeSpeed;
 	public float dodgeDistance;
@@ -54,13 +54,14 @@ public class skillHandler : MonoBehaviour {
 			if (currentDistance <= 1) {
 				currentDistance += Time.deltaTime * dodgeSpeed;
 				Debug.Log (currentDistance);
-					moveHandler.transform.position = Vector3.Lerp (moveHandler.transform.position, target, currentDistance);
-				
+				moveHandler.transform.position = Vector3.Lerp (moveHandler.transform.position, target, currentDistance);
+				attHandler.invulnerable = true;	
 
 			} else {
 				currentDistance = 0;
 				underDodge = false;
 				notDodging = true;
+				attHandler.invulnerable = false;
 			}
 		}
 	}

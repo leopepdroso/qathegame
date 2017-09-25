@@ -8,6 +8,7 @@ public class enemyIA : MonoBehaviour {
     private GameObject Enemy;
     private GameObject Player;
     private float Range;
+    public float speed = 1f;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class enemyIA : MonoBehaviour {
         if (Range <=2f)
         {
             Debug.Log("Enemy nearby");
+            Enemy.transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
         }
     }
 }

@@ -262,6 +262,7 @@ MonoBehaviour:
   interactTime: 0.01
   interactType: portal
   portalExit: {fileID: 589535401}
+  Scene: 
 --- !u!1001 &42035243
 Prefab:
   m_ObjectHideFlags: 0
@@ -1410,8 +1411,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1282957738}
   interactTime: 0.01
-  interactType: portal
+  interactType: sceneSwitcher
   portalExit: {fileID: 21459006}
+  Scene: First
 --- !u!1001 &642669635
 Prefab:
   m_ObjectHideFlags: 0
